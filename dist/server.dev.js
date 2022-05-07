@@ -1,9 +1,5 @@
 "use strict";
 
-var _app = require("firebase/app");
-
-var _analytics = require("firebase/analytics");
-
 if (process.env.NODE_ENV !== "production") {
   require('dotenv').config();
 }
@@ -28,19 +24,6 @@ app.set("router");
 app.use(expressLayouts);
 app.use(express["static"]("public"));
 app.use("/", indexRouter);
-var firebaseConfig = {
-  apiKey: "AIzaSyDVUy2sa6LtvWslzRnTDO5NL9uYekwXnN0",
-  authDomain: "test-project-ba2c2.firebaseapp.com",
-  databaseURL: "https://test-project-ba2c2-default-rtdb.firebaseio.com",
-  projectId: "test-project-ba2c2",
-  storageBucket: "test-project-ba2c2.appspot.com",
-  messagingSenderId: "138944967855",
-  appId: "1:138944967855:web:f6fba2872b7799e650505a",
-  measurementId: "G-D5H6HQLYDT"
-}; // Initialize Firebase
-
-var Fapp = (0, _app.initializeApp)(firebaseConfig);
-var analytics = (0, _analytics.getAnalytics)(Fapp);
 app.use(bodyParser.urlencoded({
   extended: true
 }));

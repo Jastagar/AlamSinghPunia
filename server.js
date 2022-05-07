@@ -1,8 +1,6 @@
 if(process.env.NODE_ENV !== "production"){
     require('dotenv').config()
 }
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
 const express = require("express")
 const bodyParser = require("body-parser")
 const indexRouter = require("./router/index.js")
@@ -20,26 +18,6 @@ app.set("router")
 app.use(expressLayouts)
 app.use(express.static("public"))
 app.use("/", indexRouter)
-
-const firebaseConfig = {
-  apiKey: "AIzaSyDVUy2sa6LtvWslzRnTDO5NL9uYekwXnN0",
-  authDomain: "test-project-ba2c2.firebaseapp.com",
-  databaseURL: "https://test-project-ba2c2-default-rtdb.firebaseio.com",
-  projectId: "test-project-ba2c2",
-  storageBucket: "test-project-ba2c2.appspot.com",
-  messagingSenderId: "138944967855",
-  appId: "1:138944967855:web:f6fba2872b7799e650505a",
-  measurementId: "G-D5H6HQLYDT"
-};
-
-// Initialize Firebase
-const Fapp = initializeApp(firebaseConfig);
-const analytics = getAnalytics(Fapp);
-
-
-
-
-
 
 
 app.use(bodyParser.urlencoded({extended:true}))
