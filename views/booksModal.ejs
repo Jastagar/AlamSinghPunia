@@ -1,0 +1,29 @@
+<div class="modal fade p-0" id="<%= id %>">
+    <div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-custom">
+        <div class="modal-content bg-dark modal-custom mx-auto">
+
+            <div class="modal-body p-2 text-center row">
+                <div class="col-md-4">
+                    <a href="<%= image %>">
+                        <img alt="Try Reloading" class="w-100" src="<%= image %>">
+                    </a>
+                </div>
+                <div class="col-md-8 text-start">
+
+                    <h4 class="gameModalTitleHeading">Name</h4>
+                    <p><%= name %></p>
+
+                    <h4 class="gameModalTitleHeading">Personal Rating</h4>
+                    <p><%= rating %>/5</p>
+
+                    <h4 class="gameModalTitleHeading">Description</h4>
+                    <p><%= des %></p>
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

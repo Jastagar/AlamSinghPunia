@@ -1,0 +1,401 @@
+:root{
+    --red-shade: rgb(250, 91, 91);
+    --white-shade: #ddd;
+    --blue-shade: #3d4a6a;
+    --darker-shade: #232d48;
+    --black-shade: #000000d0;
+    --clock-font1: 3rem;
+    --clock-font2: 1rem;
+}
+.photography{
+  min-height: 100vh;
+}
+.photography figure:hover{
+  box-shadow: 0 8px 70px 0 var(--black-shade);
+}
+.books{
+  min-height: 100vh;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+}
+.bg-black{
+    background-color: var(--darker-shade);
+}
+.bg-blue{
+    background-color: var(--blue-shade);
+}
+.text-light{
+    color: var(--white-shade);
+}
+.text-red{
+    color: var(--red-shade);
+}
+/* ==================Navbar Style======================= */
+
+.navibar{
+    position: fixed;
+    color: var(--white-shade);
+    width: 100%;
+    font-size: 2rem;
+    display: flex;
+    justify-content: end;
+    /* padding: 1%; */
+    z-index: 200;
+}
+.navibar ul{
+    width: 60%;
+    list-style: none;
+}
+.navibar li{
+    display: inline;
+    margin: 2%;
+    padding: 1% 3%;
+    transition-duration: 0.3s;
+    
+}
+.navibar li:hover{
+    cursor: pointer;
+    background-color: var(--red-shade);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.navibar a{
+    color: var(--white-shade);
+    text-decoration: none;
+}
+.dropdown {
+    position: relative;
+    display: inline;
+}
+.dropdown-content {
+    height: 0%;
+    transition-duration: 0.3s;
+    overflow: hidden;
+    position: absolute;
+    left: 20%;
+    top: 85%;
+    box-sizing: border-box;
+    background-color: var(--white-shade);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    width: 15vw;
+    z-index: 200;
+}
+.dropbtn{
+    display: inline;
+}
+.dropdown-content a {
+    transition-duration: 0.1s;
+    color: var(--darker-shade);
+    padding: 3% 10%;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--red-shade);
+}
+.dropdown-content a:hover ::before {
+    content: "This the content";
+    color: var(--darker-shade);
+}
+.dropdown:hover .dropdown-content {height: 406%;}
+.arrow{
+    position: absolute;
+    top: 48%;
+    transition-duration: 0.3s;
+    font-size: 0px;
+    border-left: 6px solid var(--white-shade);
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-right: 6px solid transparent;
+}
+.dropdown:hover .arrow{
+    transform: rotateZ(90deg);
+    position: absolute;
+    top: 50%;
+} 
+
+/* ================================================= */
+/* ==================Home Style======================= */
+
+
+.Landing{
+    height: 100vh;
+    overflow: hidden;
+}
+.landingBG{
+  background-image: url('/img/heroBackground.png');
+  background-size: cover;
+}
+.Landing span{
+    color: var(--red-shade);
+}
+.clock{
+  position: absolute;
+  top: 10%;
+  right: 1%;
+}
+
+@media only screen and (max-width: 768px) {
+  .clock{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+  }
+}
+/* ================================================= */
+
+/* =========================About==================== */
+
+.about{
+  min-height: 100vh;
+  color: var(--white-shade);
+  /* background-image: url('/img/AboutMe.jpg');
+  background-repeat: no-repeat;
+  background-size: cover; */
+  font-size: 1.7rem;
+}
+.about table{
+  border-collapse: separate;
+  border-spacing: 50px 0;}
+.about p{
+  padding: 3%;
+  font-size: 2rem;
+}
+.about .spacing{
+  height: 30vh;
+}
+.about h2{
+  text-decoration: underline;
+}
+.about .col-12 p{
+  font-size: 1.4rem;
+  padding: 3%;
+}
+
+/* ================================================= */
+
+footer{
+    color: var(--white-shade);
+}
+.social-list{
+    padding: 2%;
+    padding-top: 8%;
+    list-style: none;
+}
+.links-list{
+    padding: 2%;
+    padding-top: 8%;
+    list-style: none;
+}
+.social-list li{
+    display: inline;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.social-icons{
+    font-size: 2rem;
+    color: var(--white-shade);
+    transition-duration: 0.3s;
+}
+.social-icons:hover{
+    font-size: 2.1rem;
+    color: var(--red-shade);
+}
+
+/* ------------------------------------------------- */
+
+.gamingMain{
+    /* background-image: url("/img/GamingImage.png"); */
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
+}
+
+.Card-Body{
+    height: 40vh;
+    transition-duration: 0.3s;
+    box-shadow: 0 8px 60px 0 var(--black-shade);
+}
+.Card-Body:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    box-shadow: 0 8px 70px 0 var(--black-shade);
+}
+.Card-Body:hover .Card-Image{
+    transform: rotateY(20deg);
+    transform-style: preserve-3d;
+}
+.Card-Image-Div{
+    transition-duration: 0.3s;
+    perspective: 2000px;}
+.Card-Body:hover .Card-Image-Div{
+    perspective: 2000px;
+}
+.Card-Image{
+    transition-duration: 0.3s;
+    width: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    left: -60px;
+    top: -30px;
+}
+
+
+/* ======================================= */
+
+.booksMain{
+  /* background-color: var(--black-shade); */
+}
+.Card-Image-Books{
+    position: relative;
+    top: -50px;
+    width: 90%;
+}
+.Card-Image-Div-Books{
+    display: flex;
+    justify-content: center;
+}
+.Card-Body-Books{
+  cursor: pointer;
+  /* box-shadow: 0px 8px 60px -15px var(--black-shade); */
+}
+.Card-Body-Books:hover{
+  cursor: pointer;
+  box-shadow: 0px 8px 60px -15px var(--black-shade);
+}
+
+/* =================================== */
+
+
+.flip-clock {
+  text-align: center;
+  perspective: 400px;
+  margin: 20px auto;
+}
+
+.flip-clock__piece {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.flip-clock__slot {
+  font-size: var(--clock-font2);
+}
+
+
+.card-clock {
+  display: block;
+  position: relative; 
+  padding-bottom: 0.72em;
+  font-size: var(--clock-font1);
+  line-height: 0.95;
+}
+
+.card__top,
+.card__bottom,
+.card__back::before,
+.card__back::after {
+  display: block;
+  height: 0.72em;
+  color: #ccc;
+  background: #222;
+  padding: 0.25em 0.25em;
+  border-radius: 0.15em 0.15em 0 0;
+  transform-style: preserve-3d;
+  width: 1.8em;
+  transform: translateZ(0);
+}
+
+.card__bottom { 
+  color: #FFF;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  border-top: solid 1px #000;
+  background: #393939; 
+  border-radius: 0 0 0.15em 0.15em; 
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.card__bottom::after {
+  display: block;
+  margin-top: -0.72em;
+}
+
+.card__back::before,
+.card__bottom::after {
+  content: attr(data-value);
+}
+
+.card__back {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  left: 0%;
+  pointer-events: none;
+}
+
+.card__back::before {
+  position: relative;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.flip .card__back::before {
+  animation: flipTop 0.3s cubic-bezier(.37,.01,.94,.35);
+  animation-fill-mode: both;
+  transform-origin: center bottom;
+}
+
+.flip .card__back .card__bottom {
+  transform-origin: center top;
+  animation-fill-mode: both;
+  animation: flipBottom 0.6s cubic-bezier(.15,.45,.28,1);
+}
+
+@keyframes flipTop {
+  0% {
+    transform: rotateX(0deg);
+    z-index: 2;
+  }
+  0%, 99% {
+    opacity: 0.99;
+  }
+  100% {
+    transform: rotateX(-90deg);
+    opacity: 0;
+  }
+}
+
+@keyframes flipBottom {
+  0%, 50% {
+    z-index: -1;
+    transform: rotateX(90deg);
+    opacity: 0;
+  }
+  51% {
+    opacity: 0.99;
+  }
+  100% {
+    opacity: 0.99;
+    transform: rotateX(0deg);
+    z-index: 5;
+  }
+}
+
+/* ========================Game Modal================================ */
+
+.modal-title{
+  font-size: 2rem;
+}
+.modal-custom{
+  width: 75%;
+  /* height: 75%; */
+}
+.gameModalTitleHeading{
+  text-decoration: underline;
+}

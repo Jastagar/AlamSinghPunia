@@ -1,0 +1,20 @@
+<section class="photography bg-dark">
+	<div class="container">
+	<div class="row">
+		<h1 class="display-1 text-light text-center mb-5 pt-10">Gallary</h1>
+	</div>
+		<div class="row justify-content-center">
+			<% for(let i=0;i<data.photography.length;i++) {%>
+
+				<figure class="grid-item col-md-4 col-sm-4 col-xs-12">
+					<a href="<%= data.photography[i].image %>">
+						<img alt="Try Reloading" class="w-100" src="<%= data.photography[i].image %>"/>
+					</a>
+					<figcaption><%= data.photography[i].name %></figcaption>
+				</figure>
+
+			<% } %>
+		</div>
+		</div>
+	</div>
+</section>

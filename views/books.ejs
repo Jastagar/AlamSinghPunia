@@ -1,0 +1,25 @@
+<section class="books bg-blue">
+    <div class="booksMain text-light">
+        <div class="container">
+            <h1 class="text-center display-1 pb-10 pt-10">Books I have read.</h1>
+            <div class="row text-white justify-content-center py-5">
+
+                <% for(let i=0;i<data.books.length;i++) {%>
+                    <div class="col-md-3 Card-Body-Books border my-5 mx-5 rounded"  data-aos="flip-left" data-aos-delay="<% i*500 %>" data-bs-toggle="modal" data-bs-target="#<%= data.books[i].name.split(" ").join("") %>">
+                        <div class="Card-Image-Div-Books">
+                            <img alt="Try Reloading" class="Card-Image-Books" src="<%= data.books[i].image %>">
+                        </div>
+                        
+                    </div>
+                    <%- include("booksModal",{
+                        id:data.books[i].name.split(" ").join(""),
+                        image:data.books[i].image,
+                        name:data.books[i].name,
+                        rating:data.books[i].rating,
+                        des:data.books[i].description}) %>
+                <% } %>
+
+            </div>
+        </div>
+    </div>
+</section>

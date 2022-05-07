@@ -1,0 +1,119 @@
+<div class="container py-5">
+    <div class="row pt-10 justify-content-between">
+    <div class="col-5 border">
+        <div class="display-1">Games</div>
+            <form id="addItemsForm" class="pt-10" method="post" action="/addItems">
+                <div>
+                    <label for="file">ImageFile</label><br>
+                    <input type="file" name="file" accept="image/png, image/jpeg, image/jpg" required></div>
+                <div>
+                    <label for="name">Name</label><br>
+                    <input type="text" name="name" required></div>
+                <div>
+                    <label for="number">Number</label><br>
+                    <input type="number" name="rating" required></div>
+                <div>
+                    <label for="description">Description</label><br>
+                    <textarea name="description" cols="30" rows="10" required></textarea></div>
+                <div>
+                    <button onclick="resetForm()" class="btn btn-primary" type="submit"> Submit </button>
+                </div>
+            </form>
+    </div>
+    <div class="col-5 border p-5">
+        <form method="post" action="/toremove">
+            <% for(let i=0;i<data.gaming.length;i++) {%>
+                <input type="checkbox" id="GameToRemove<%= i %>" name="toRemove" value="<%= i %>">
+                    <%= data.gaming[i].name %>
+                </input><br>
+            <% } %>
+            <button class="btn btn-danger" type="submit">Delete Selected</button>
+        </form>
+    </div>
+    </div>
+</div>
+
+<div class="container py-5">
+    <div class="row pt-10 justify-content-between">
+    <div class="col-5 border">
+        <div class="display-1">Books</div>
+            <form id="addBooksForm" class="pt-10" method="post" action="/addBooks">
+                <div>
+                    <label for="Bfile">ImageFile</label><br>
+                    <input type="file" name="Bfile" accept="image/png, image/jpeg, image/jpg" required></div>
+                <div>
+                    <label for="Bname">Name</label><br>
+                    <input type="text" name="Bname" required></div>
+                <div>
+                    <label for="Bnumber">Number</label><br>
+                    <input type="number" name="Brating" required></div>
+                <div>
+                    <label for="Bdescription">Description</label><br>
+                    <textarea name="Bdescription" cols="30" rows="10" required></textarea></div>
+                <div>
+                    <button onclick="resetBForm()" class="btn btn-primary" type="submit"> Submit </button>
+                </div>
+            </form>
+    </div>
+    <div class="col-5 border p-5">
+        <form method="post" action="/toremoveB">
+            <% for(let i=0;i<data.books.length;i++) {%>
+                <input type="checkbox" id="BooksToRemove<%= i %>" name="toRemoveB" value="<%= i %>">
+                    <%= data.books[i].name %>
+                </input><br>
+            <% } %>
+            <button class="btn btn-danger" type="submit">Delete Selected</button>
+        </form>
+    </div>
+    </div>
+</div>
+
+<div class="container py-5">
+    <div class="row pt-10 justify-content-between">
+    <div class="col-5 border">
+        <div class="display-1">Photos</div>
+            <form id="addPicsForm" class="pt-10" method="post" action="/addPics">
+                <div>
+                    <label for="Pfile">ImageFile</label><br>
+                    <input type="file" name="Pfile" accept="image/png, image/jpeg, image/jpg" required></div>
+                <div>
+                    <label for="Pname">Name</label><br>
+                    <input type="text" name="Pname" required></div>
+                <div class="p-4">
+                    <button onclick="resetPForm()" class="btn btn-primary" type="submit"> Submit </button>
+                </div>
+            </form>
+    </div>
+    <div class="col-5 border p-5">
+        <form method="post" action="/toremoveP">
+            <% for(let i=0;i<data.photography.length;i++) {%>
+                <input type="checkbox" id="PicsToRemove<%= i %>" name="toRemoveP" value="<%= i %>">
+                    <%= data.photography[i].name %>
+                </input><br>
+            <% } %>
+            <button class="btn btn-danger" type="submit">Delete Selected</button>
+        </form>
+    </div>
+    </div>
+</div>
+
+<!-- <div class="container">
+    <div class="display-1">Books</div>
+    <form class="pt-10" method="post" action="/addbooks">
+        <div>
+            <label for="file">ImageFile</label><br>
+            <input type="file" name="file" accept="image/png, image/jpeg, image/jpg"></div>
+        <div>
+            <label for="name">Name</label><br>
+            <input type="text" name="name"></div>
+        <div>
+            <label for="number">Number</label><br>
+            <input type="number" name="rating"></div>
+        <div>
+            <label for="description">Description</label><br>
+            <textarea name="description" cols="30" rows="10"></textarea></div>
+        <div>
+            <button type="submit"> Submit </button>
+        </div>
+    </form>
+</div> -->

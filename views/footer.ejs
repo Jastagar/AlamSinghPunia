@@ -1,0 +1,32 @@
+
+<footer>
+    <div class="container text-center h-100">
+        <div class="row h-100">
+            <div class="col-4 footer my-auto">
+                <h2 class="display-5">
+                    My Contacts
+                </h2>
+                <ul class="links-list">
+                    <li>Email</li>
+                    <li>Phone</li>
+                    <li>Insta</li>
+                </ul>
+            </div>
+            <div class="col-4 footer my-auto">
+                <h2 class="display-5">
+                    My Social Media
+                </h2>
+                <ul class="social-list">
+                <% for(let i in data.user_social) {%>
+                    <% if(data.user_social[i]) {%>
+                        <li><a href='<%= data.user_social[i] %>'><i class='fa fa-<%= i %> social-icons'></i></a></li>
+                    <% } %>
+                <% } %>
+                </ul>
+            </div>
+            <div class="col-4 footer my-auto">
+                This is a Footer Section 3
+            </div>
+        </div>
+    </div>
+</footer>

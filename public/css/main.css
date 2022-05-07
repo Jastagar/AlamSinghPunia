@@ -1,0 +1,468 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.photography {
+  min-height: 100vh;
+}
+
+.photography figure:hover {
+  -webkit-box-shadow: 0 8px 70px 0 #000000d0;
+          box-shadow: 0 8px 70px 0 #000000d0;
+}
+
+.books {
+  min-height: 100vh;
+}
+
+section .photography {
+  min-height: 100vh;
+}
+
+section .photography figure:hover {
+  -webkit-box-shadow: 0 8px 70px 0 #000000d0;
+          box-shadow: 0 8px 70px 0 #000000d0;
+}
+
+section .books {
+  min-height: 100vh;
+}
+
+section .gamingMain {
+  min-height: 100vh;
+}
+
+.bg-black {
+  background-color: #232d48;
+}
+
+.bg-blue {
+  background-color: #3d4a6a;
+}
+
+.text-light {
+  color: #ddd;
+}
+
+.text-red {
+  color: #fa5b5b;
+}
+
+.pt-10 {
+  padding-top: 10%;
+}
+
+.pb-10 {
+  padding-bottom: 10%;
+}
+
+/* ==================Navbar Style======================= */
+.navibar {
+  position: fixed;
+  color: #ddd;
+  width: 100%;
+  font-size: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  z-index: 200;
+}
+
+.navibar ul {
+  width: 60%;
+  list-style: none;
+}
+
+.navibar li {
+  display: inline;
+  margin: 2%;
+  padding: 1% 3%;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
+.navibar li:hover {
+  cursor: pointer;
+  background-color: #fa5b5b;
+  -webkit-box-shadow: 0px 8px 16px 0px #000000d0;
+          box-shadow: 0px 8px 16px 0px #000000d0;
+}
+
+.navibar a {
+  color: #ddd;
+  text-decoration: none;
+}
+
+.navibar .dropdown {
+  position: relative;
+  display: inline;
+}
+
+.navibar .dropdown:hover .dropdown-content {
+  height: 406%;
+}
+
+.navibar .dropdown:hover .arrow {
+  -webkit-transform: rotateZ(90deg);
+          transform: rotateZ(90deg);
+  position: absolute;
+  top: 50%;
+}
+
+.navibar .dropdown-content {
+  height: 0%;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  overflow: hidden;
+  position: absolute;
+  left: 20%;
+  top: 85%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #ddd;
+  -webkit-box-shadow: 0px 8px 16px 0px #000000d0;
+          box-shadow: 0px 8px 16px 0px #000000d0;
+  width: 15vw;
+  z-index: 200;
+}
+
+.navibar .dropdown-content a {
+  -webkit-transition-duration: 0.1s;
+          transition-duration: 0.1s;
+  color: #232d48;
+  padding: 3% 10%;
+  text-decoration: none;
+  display: block;
+}
+
+.navibar .dropdown-content a:hover {
+  background-color: #fa5b5b;
+}
+
+.navibar .dropdown-content a::before {
+  content: attr(data-value);
+  color: #232d48;
+}
+
+.navibar .dropbtn {
+  display: inline;
+}
+
+.navibar .arrow {
+  position: absolute;
+  top: 48%;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  font-size: 0px;
+  border-left: 6px solid #ddd;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-right: 6px solid transparent;
+}
+
+/* ==================Home Style======================= */
+.Landing {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.Landing span {
+  color: #fa5b5b;
+}
+
+.Landing .clock {
+  position: absolute;
+  top: 10%;
+  right: 1%;
+}
+
+.Landing .flip-clock {
+  text-align: center;
+  -webkit-perspective: 400px;
+          perspective: 400px;
+  margin: 20px auto;
+}
+
+.Landing .flip-clock__piece {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.Landing .flip-clock__slot {
+  font-size: 1rem;
+}
+
+.Landing .card-clock {
+  display: block;
+  position: relative;
+  padding-bottom: 0.72em;
+  font-size: 3rem;
+  line-height: 0.95;
+}
+
+.Landing .card__top,
+.Landing .card__bottom,
+.Landing .card__back::before,
+.Landing .card__back::after {
+  display: block;
+  height: 0.72em;
+  color: #ddd;
+  background: #000000d0;
+  padding: 0.25em 0.25em;
+  border-radius: 0.15em 0.15em 0 0;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  width: 1.8em;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+}
+
+.Landing .card__bottom {
+  color: #FFF;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  border-top: solid 1px #000;
+  background: #393939;
+  border-radius: 0 0 0.15em 0.15em;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.Landing .card__bottom::after {
+  display: block;
+  margin-top: -0.72em;
+}
+
+.Landing .card__back::before,
+.Landing .card__bottom::after {
+  content: attr(data-value);
+}
+
+.Landing .card__back {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  left: 0%;
+  pointer-events: none;
+}
+
+.Landing .card__back::before {
+  position: relative;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.Landing .card__back .flip .card__back::before {
+  -webkit-animation: flipTop 0.3s cubic-bezier(0.37, 0.01, 0.94, 0.35);
+          animation: flipTop 0.3s cubic-bezier(0.37, 0.01, 0.94, 0.35);
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-transform-origin: center bottom;
+          transform-origin: center bottom;
+}
+
+.Landing .card__back .flip .card__back .card__bottom {
+  -webkit-transform-origin: center top;
+          transform-origin: center top;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation: flipBottom 0.6s cubic-bezier(0.15, 0.45, 0.28, 1);
+          animation: flipBottom 0.6s cubic-bezier(0.15, 0.45, 0.28, 1);
+}
+
+@-webkit-keyframes flipTop {
+  0% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+    z-index: 2;
+  }
+  0%, 99% {
+    opacity: 0.99;
+  }
+  100% {
+    -webkit-transform: rotateX(-90deg);
+            transform: rotateX(-90deg);
+    opacity: 0;
+  }
+}
+
+@keyframes flipTop {
+  0% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+    z-index: 2;
+  }
+  0%, 99% {
+    opacity: 0.99;
+  }
+  100% {
+    -webkit-transform: rotateX(-90deg);
+            transform: rotateX(-90deg);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes flipBottom {
+  0%, 50% {
+    z-index: -1;
+    -webkit-transform: rotateX(90deg);
+            transform: rotateX(90deg);
+    opacity: 0;
+  }
+  51% {
+    opacity: 0.99;
+  }
+  100% {
+    opacity: 0.99;
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+    z-index: 5;
+  }
+}
+
+@keyframes flipBottom {
+  0%, 50% {
+    z-index: -1;
+    -webkit-transform: rotateX(90deg);
+            transform: rotateX(90deg);
+    opacity: 0;
+  }
+  51% {
+    opacity: 0.99;
+  }
+  100% {
+    opacity: 0.99;
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+    z-index: 5;
+  }
+}
+
+.landingBG {
+  background-image: url("/img/heroBackground.png");
+  background-size: cover;
+}
+
+/* =========================About==================== */
+.about {
+  min-height: 100vh;
+  color: #ddd;
+  font-size: 1.7rem;
+}
+
+.about table {
+  border-collapse: separate;
+  border-spacing: 50px 0;
+}
+
+.about p {
+  padding: 3%;
+  font-size: 2rem;
+}
+
+.about .spacing {
+  height: 30vh;
+}
+
+.about h2 {
+  text-decoration: underline;
+}
+
+.about .col-12 p {
+  font-size: 1.4rem;
+  padding: 3%;
+}
+
+/* =====================Gaming======================= */
+.gamingMain .Card-Body {
+  height: 40vh;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  -webkit-box-shadow: 0 8px 60px 0 #000000d0;
+          box-shadow: 0 8px 60px 0 #000000d0;
+}
+
+.gamingMain .Card-Body:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-box-shadow: 0 8px 70px 0 #000000d0;
+          box-shadow: 0 8px 70px 0 #000000d0;
+}
+
+.gamingMain .Card-Body:hover .Card-Image {
+  -webkit-transform: rotateY(20deg);
+          transform: rotateY(20deg);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.gamingMain .Card-Body .Card-Image-Div {
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  -webkit-perspective: 2000px;
+          perspective: 2000px;
+}
+
+.gamingMain .Card-Body:hover .Card-Image-Div {
+  -webkit-perspective: 2000px;
+          perspective: 2000px;
+}
+
+.gamingMain .Card-Body .Card-Image {
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  width: 100%;
+  position: relative;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  left: -60px;
+  top: -30px;
+}
+
+/* =====================books================== */
+.booksMain .Card-Image-Books {
+  position: relative;
+  top: -50px;
+  width: 90%;
+}
+
+.booksMain .Card-Image-Div-Books {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.booksMain .Card-Body-Books {
+  cursor: pointer;
+  /* box-shadow: 0px 8px 60px -15px var(--black-shade); */
+}
+
+.booksMain .Card-Body-Books:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 0px 8px 60px -15px #000000d0;
+          box-shadow: 0px 8px 60px -15px #000000d0;
+}
+
+/* ========================Game Modal================================ */
+.modal .modal-title {
+  font-size: 2rem;
+}
+
+.modal .modal-custom {
+  width: 75%;
+  /* height: 75%; */
+}
+
+.modal .gameModalTitleHeading {
+  text-decoration: underline;
+}
+/*# sourceMappingURL=main.css.map */
