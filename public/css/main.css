@@ -144,7 +144,7 @@ section .gamingMain {
 }
 
 .navibar .dropdown-content a::before {
-  content: attr(data-value);
+  content: "This the content";
   color: #232d48;
 }
 
@@ -240,7 +240,7 @@ section .gamingMain {
 
 .Landing .card__back::before,
 .Landing .card__bottom::after {
-  content: attr(data-value);
+  content: "attr(data-value)";
 }
 
 .Landing .card__back {
