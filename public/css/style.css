@@ -250,11 +250,6 @@ footer{
 
 /* ------------------------------------------------- */
 
-.gamingMain{
-    /* background-image: url("/img/GamingImage.png"); */
-    /* background-repeat: no-repeat; */
-    /* background-size: cover; */
-}
 
 .Card-Body{
     height: 40vh;
@@ -288,9 +283,6 @@ footer{
 
 /* ======================================= */
 
-.booksMain{
-  /* background-color: var(--black-shade); */
-}
 .Card-Image-Books{
     position: relative;
     top: -50px;
