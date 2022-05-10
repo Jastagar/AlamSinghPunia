@@ -18,7 +18,6 @@ app.use(expressLayouts)
 app.use(express.static("public"))
 app.use("/", indexRouter)
 
-
 app.use(bodyParser.urlencoded({extended:true}))
 
 var data = fs.readFileSync('data.json');
