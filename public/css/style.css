@@ -5,7 +5,7 @@
     --darker-shade: #232d48;
     --black-shade: #000000d0;
     --clock-font1: 3rem;
-    --clock-font2: 1rem;
+    --clock-font2: 0rem;
 }
 .photography{
   min-height: 100vh;
@@ -40,19 +40,18 @@ body{
     color: var(--white-shade);
     width: 100%;
     font-size: 2rem;
+    height: 6%;
     display: flex;
     justify-content: end;
     /* padding: 1%; */
     z-index: 200;
 }
 .navibar ul{
-    width: 60%;
     list-style: none;
 }
 .navibar li{
-    display: inline;
-    margin: 2%;
-    padding: 1% 3%;
+    display: inline-block;
+    padding: 0% 2%;
     transition-duration: 0.3s;
     
 }
@@ -117,12 +116,53 @@ body{
     top: 50%;
 } 
 
+.navibars{
+  display: none;
+}
+
+
+
+
+@media only screen and (max-width:780px) {
+  .navibars{
+    display: block;
+    font-size: 2rem;
+  }
+  .naviFull{
+    display: none;
+  }
+  .navibar{
+    position: fixed;
+    color: var(--white-shade);
+    width: 100%;
+    font-size: 2rem;
+    /* padding: 1%; */
+    z-index: 200;
+  }
+  .navibar .col-lg-6{
+    text-align: center;
+  }
+  .navibar li{
+    display: block;
+    transition-duration: 0.3s;
+  }
+  .navbar-toggler{
+    font-size: 2.25rem;
+  }
+  .dropdown-content{
+    width: 35%;
+  }
+}
+
+
+
 /* ================================================= */
 /* ==================Home Style======================= */
 
 
 .Landing{
     height: 100vh;
+    margin-top: 6%;
     overflow: hidden;
 }
 .landingBG{
@@ -137,12 +177,14 @@ body{
   top: 10%;
   right: 1%;
 }
-
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width:992px){
+  .Landing{
+    overflow: scroll;
+  }
   .clock{
     position: absolute;
-    top: 10%;
-    left: 50%;
+    padding: 0%;
+    margin: 0%;
   }
 }
 /* ================================================= */
@@ -208,11 +250,6 @@ footer{
 
 /* ------------------------------------------------- */
 
-.gamingMain{
-    /* background-image: url("/img/GamingImage.png"); */
-    /* background-repeat: no-repeat; */
-    /* background-size: cover; */
-}
 
 .Card-Body{
     height: 40vh;
@@ -246,9 +283,6 @@ footer{
 
 /* ======================================= */
 
-.booksMain{
-  /* background-color: var(--black-shade); */
-}
 .Card-Image-Books{
     position: relative;
     top: -50px;

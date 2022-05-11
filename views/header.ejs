@@ -1,16 +1,39 @@
 <nav class="navibar shadow bg-dark">
-    <ul class="m-1">
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About Me</a></li>
-        <li class="dropdown">
-                <div class="dropbtn"><span>My Hobbies</span> <span class="arrow"></span></div>
+    <div class="container-fluid navibars">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fa fa-bars text-light"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <ul class="m-1 p-0">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About Me</a></li>
+            <li class="dropdown">
+                <div class="dropbtn"><span>My Hobbies</span> <span class="arrow ms-1"></span></div>
                 <div class="dropdown-content">
                     <a href="/gaming">Gaming</a>
                     <a href="/photography">Photography</a>
                     <a href="/books">Books</a>
                     <a href="#">Stock Market</a>
                 </div>
-        </li>
-        <li><a href="/contact">Contact Me</a></li>
-    </ul>
+            </li>
+            <li><a href="/contact">Contact Me</a></li>
+        </ul>
+        </div>
+    </div>
+    <div class="col-12 naviFull">
+        <ul class="m-1 p-0 text-end">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About Me</a></li>
+            <li class="dropdown">
+                <div class="dropbtn"><span>My Hobbies</span> <span class="arrow ms-1"></span></div>
+                <div class="dropdown-content">
+                    <a href="/gaming">Gaming</a>
+                    <a href="/photography">Photography</a>
+                    <a href="/books">Books</a>
+                    <a href="#">Stock Market</a>
+                </div>
+            </li>
+            <li><a href="/contact">Contact Me</a></li>
+        </ul>
+    </div>
 </nav>
