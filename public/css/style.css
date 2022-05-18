@@ -183,9 +183,10 @@ body{
     overflow: scroll;
   }
   .clock{
-    position: absolute;
-    padding: 0%;
-    margin: 0%;
+    position: static;
+  }
+  .Landing .my-auto{
+    text-align: center;
   }
 }
 /* ================================================= */
