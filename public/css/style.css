@@ -33,8 +33,10 @@ body{
 .text-red{
     color: var(--red-shade);
 }
+.pt-10{
+  padding-top: 10%;
+}
 /* ==================Navbar Style======================= */
-
 .navibar{
     position: fixed;
     color: var(--white-shade);
@@ -71,11 +73,10 @@ body{
 .dropdown-content {
     height: 0%;
     transition-duration: 0.3s;
-    overflow: hidden;
+    overflow-y: hidden;
     position: absolute;
     left: 20%;
     top: 85%;
-    box-sizing: border-box;
     background-color: var(--white-shade);
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     width: 15vw;
@@ -87,7 +88,7 @@ body{
 .dropdown-content a {
     transition-duration: 0.1s;
     color: var(--darker-shade);
-    padding: 3% 10%;
+    /* padding: 3% 10%; */
     text-decoration: none;
     display: block;
 }
@@ -95,11 +96,9 @@ body{
 .dropdown-content a:hover {
     background-color: var(--red-shade);
 }
-.dropdown-content a:hover ::before {
-    content: "This the content";
-    color: var(--darker-shade);
+.dropdown:hover .dropdown-content {
+  height: 400%;
 }
-.dropdown:hover .dropdown-content {height: 406%;}
 .arrow{
     position: absolute;
     top: 48%;
@@ -150,11 +149,14 @@ body{
     font-size: 2.25rem;
   }
   .dropdown-content{
-    width: 35%;
+    width: 50%;
   }
+  .navbar-collapse{
+    width: 100vw;
+  }
+  
+
 }
-
-
 
 /* ================================================= */
 /* ==================Home Style======================= */
@@ -162,7 +164,6 @@ body{
 
 .Landing{
     height: 100vh;
-    margin-top: 6%;
     overflow: hidden;
 }
 .landingBG{
@@ -265,6 +266,19 @@ footer{
     transform: rotateY(20deg);
     transform-style: preserve-3d;
 }
+.Card-Body:hover .Card-Image-Div::before{
+    content: "";
+    position: absolute;
+    width: 20%;
+    height: 110%;
+    background-color: white;
+    z-index: 2;
+    transform: rotateZ(15deg);
+    top: -15%;
+    opacity: 0;
+    left: -50%;
+    animation: reflection 0.5s cubic-bezier(0.59, 0, 0.39, 1.01) 1 normal forwards;
+}
 .Card-Image-Div{
     transition-duration: 0.3s;
     perspective: 2000px;}
@@ -280,6 +294,19 @@ footer{
     top: -30px;
 }
 
+@keyframes reflection {
+    0%{
+      opacity: 0;
+    }
+    50%{
+      opacity: 0.3;
+    }
+    100%{
+      opacity: 0;
+      transform: rotateZ(15%);
+      left: 100%;
+    }
+}
 
 /* ======================================= */
 
