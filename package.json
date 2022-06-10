@@ -4,7 +4,7 @@
   "description": "Personal Portfolio",
   "main": "server.js",
   "scripts": {
-    "test": "jest",
+    "test": "mocha",
     "start": "nodemon index.js"
   },
   "author": "Jastagar",
@@ -17,6 +17,7 @@
     "express-ejs-layouts": "^2.5.1",
     "firebase": "^9.8.0",
     "jest": "^28.1.1",
+    "mocha": "^10.0.0",
     "mongodb": "^4.4.1",
     "mongoose": "^6.2.9",
     "nodemon": "^2.0.16"
