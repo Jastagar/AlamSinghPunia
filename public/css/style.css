@@ -278,46 +278,56 @@ footer{
 
 
 .Card-Body{
-    height: 40vh;
+    /* height: 40vh; */
     transition-duration: 0.3s;
+    display: flex;
+    flex-direction: column;
     box-shadow: 0 8px 60px 0 var(--black-shade);
+}
+.Card-Image{
+  width: 100%;
+  height: 100%;
 }
 .Card-Body:hover{
     cursor: pointer;
     transform: scale(1.1);
     box-shadow: 0 8px 70px 0 var(--black-shade);
 }
-.Card-Body:hover .Card-Image{
+.Card-Image-Div{
+  transition-duration: 0.3s;
+  width: 100%;
+  height: 70%;
+  overflow: hidden;
+  position: relative;
+  transform-style: preserve-3d;
+  perspective: 2000px;
+  left: -60px;
+  top: -30px;
+}
+
+.Card-Body:hover .Card-Image-Div{
     transform: rotateY(20deg);
     transform-style: preserve-3d;
 }
+
 .Card-Body:hover .Card-Image-Div::before{
     content: "";
     position: absolute;
     width: 20%;
-    height: 110%;
+    height: 130%;
     background-color: white;
     z-index: 2;
     transform: rotateZ(15deg);
-    top: -15%;
+    top: -20%;
     opacity: 0;
     left: -50%;
-    animation: reflection 0.5s cubic-bezier(0.59, 0, 0.39, 1.01) 1 normal forwards;
+    animation: reflection 0.5s cubic-bezier(0.59, 0, 0.39, 1.01) 1 normal;
+
 }
-.Card-Image-Div{
-    transition-duration: 0.3s;
-    perspective: 2000px;}
-.Card-Body:hover .Card-Image-Div{
+.Card-Body{
     perspective: 2000px;
 }
-.Card-Image{
-    transition-duration: 0.3s;
-    width: 100%;
-    position: relative;
-    transform-style: preserve-3d;
-    left: -60px;
-    top: -30px;
-}
+
 
 @keyframes reflection {
     0%{

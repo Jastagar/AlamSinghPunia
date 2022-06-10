@@ -1,15 +1,20 @@
 <section>
     <div class="gamingMain bg-dark">
         <div class="container">
-            <h1 class="text-center display-1 text-white pb-10 pt-10">Games I have played.</h1>
-            <div class="row text-white justify-content-center py-5">
+            
+            <div class="row text-white justify-content-around py-5">
+                <div class="my-5">
+                    <h1 class="text-center display-1 text-white">Games I have played.</h1>
+                </div>
 
                 <% for(let i=0;i<data.gaming.length;i++) {%>
-                    <div class="col-md-3 Card-Body my-5 mx-5" data-aos="fade-up" data-bs-toggle="modal" data-bs-target="#<%= data.gaming[i].name.split(" ").join("") %>" >
+                    <div class="col-10 col-lg-4 col-xl-3 Card-Body m-5" data-aos="fade-up" data-bs-toggle="modal" data-bs-target="#<%= data.gaming[i].name.split(" ").join("") %>" >
                         <div class="Card-Image-Div">
                             <img alt="Try Reloading" class="Card-Image mx-auto" src="<%= data.gaming[i].image %>">
                         </div>
-                        <h3 class="display-5"><%= data.gaming[i].name %></h3>
+                        <div>
+                            <h3><%= data.gaming[i].name %></h3>
+                        </div>
                     </div>
                     <%- include("gameModal",{
                         id:data.gaming[i].name.split(" ").join(""),
