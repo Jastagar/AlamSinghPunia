@@ -9,19 +9,20 @@ const app = express()
 const fs = require('fs');
 const port = process.env.PORT;
 
+app.use(express.static("public"))
+app.use(expressLayouts)
+app.use(bodyParser.urlencoded({extended:true}))
+
 app.set("view engine", "ejs")
 app.set("views", __dirname+"/views")
 app.set("layout", "layouts/layout")
 app.set("router")
 
-app.use(expressLayouts)
-app.use(express.static("public"))
 app.use("/", indexRouter)
-
-app.use(bodyParser.urlencoded({extended:true}))
 
 var data = fs.readFileSync('data.json');
 var userData = JSON.parse(data);
+
 
 app.post("/addItems", (req,res)=>{
     var name = req.body.name

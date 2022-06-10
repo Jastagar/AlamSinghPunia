@@ -17,16 +17,16 @@ var app = express();
 var fs = require('fs');
 
 var port = process.env.PORT;
+app.use(express["static"]("public"));
+app.use(expressLayouts);
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
 app.set("view engine", "ejs");
 app.set("views", __dirname + "/views");
 app.set("layout", "layouts/layout");
 app.set("router");
-app.use(expressLayouts);
-app.use(express["static"]("public"));
 app.use("/", indexRouter);
-app.use(bodyParser.urlencoded({
-  extended: true
-}));
 var data = fs.readFileSync('data.json');
 var userData = JSON.parse(data);
 app.post("/addItems", function (req, res) {
